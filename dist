@@ -1,0 +1,41 @@
+"use strict";
+let count = 0;
+count += 1;
+const message = 'hellog world';
+const done = true;
+const numbers = [1, 3, 3];
+const messages = ['hellog', 'world'];
+let mightBeUndefinded = undefined;
+let nullableNumber = 19;
+let color = 'red';
+color = 'yellow';
+function sum(x, y) {
+    return x + y;
+}
+const rusult = sum(1, 2);
+function sumArray(numbers) {
+    return numbers.reduce((acc, current) => acc + current, 0);
+}
+const total = sumArray([1, 2, 3, 4, 5]);
+console.log(total);
+function returnNothying() {
+    console.log('ddddd');
+    return 4;
+}
+returnNothying();
+const person = {
+    name: 'kim',
+    age: 20,
+};
+const expert = {
+    name: 'yang',
+    age: 23,
+    skills: ['yang', 'chan', 'seok']
+};
+// interface 나 type allias를 써라
+//제네릭 여러종류의 타입을 맞출때 써 <T>
+function merge(a, b) {
+    return Object.assign(Object.assign({}, a), b);
+}
+const merged = merge({ foo: 1 }, { bar: 2 });
+// merged.bar나 merged.foo 가 나오면서 자료형을 유추할 수 있어 
